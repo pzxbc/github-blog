@@ -9,6 +9,7 @@ description: 不积跬步无以至千里
 author: 盆栽小白菜
 email: pzxbc@qq.com
 language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
