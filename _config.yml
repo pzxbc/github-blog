@@ -89,8 +89,8 @@ exclude_generator:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repository: https://github.com/pzxbc/pzxbc.github.io.git
+  repository: git@github.com:pzxbc/pzxbc.github.io.git
   branch: master
 - type: git
-  repository: https://gitcafe.com/pzxbc/pzxbc.git
+  repository: git@gitcafe.com:pzxbc/pzxbc.git
   branch: gitcafe-pages
