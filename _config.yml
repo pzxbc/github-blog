@@ -32,7 +32,7 @@ default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
-render_drafts: false
+render_drafts: true
 post_asset_folder: false
 relative_link: false
 highlight:
@@ -79,6 +79,8 @@ disqus_shortname:
 
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
+baidusitemap:
+path: baidusitemap.xml
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
 theme: yilia
 exclude_generator:
@@ -86,6 +88,9 @@ exclude_generator:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repository: https://github.com/pzxbc/pzxbc.github.io.git
   branch: master
+- type: git
+  repository: https://gitcafe.com/pzxbc/pzxbc.git
+  branch: gitcafe-pages
