@@ -14,7 +14,7 @@ permalink: hexo-blog-wiki
 ### 安装和配置
 参考[官方文档](https://hexo.io/docs/index.html)说明
 ### 使用
-```Shell
+```bash
 # 创建新的站点
 hexo init [folder]
 # 创建新的文章
@@ -23,13 +23,13 @@ hexo new [layout] <title>
 hexo generate
 # 发布草稿
 hexo publish [layout] <filename>
-# 启动一个本地Server
-# 默认的地址为: `http://localhost:4000/`
-hexo server
+# 启动一个本地Server，并显示草稿文章
+# 默认的地址为: http://localhost:4000/
+hexo server --draft
 # 部署
 hexo deploy
 # 清除
-# 清除缓存文件(`db.json`)和生成的文件(`public/`)
+# 清除缓存文件(db.json)和生成的文件(public/)
 hexo clean
 ```
 <!-- more -->
@@ -37,15 +37,15 @@ hexo clean
 ## 2. Hexo主题使用
 ### 主题安装使用
 在Hexo站点目录下执行下面命令，然后修改`_config.yml`中的`theme`字段为`theme-name`。你可以在[Hexo主题库](https://github.com/hexojs/hexo/wiki/Themes)寻找你喜欢的主题。
-```Shell
+```bash
 git clone <repository> themes/<theme-name>
 ```
 > git clone完成后，我们就可以将`themes/<theme-name>`目录下的.git目录删除了
 
 ### yilia主题的配置
-```YAML
-# 头像设置
-avatar: "avatar头像，可以使用github头像的链接"
+``` yml
+# 头像设置 将图片放在主题目录下的source/img文件夹下
+avatar: "/img/avatar.jpg"
 # 多说设置，如果需要开启，填的是你在多说上申请的项目名称. 
 # (PS: 登陆www.duoshuo.com, 然后点我要安装就会看到项目申请, 记得用引号引起项目名称)
 duoshuo: "项目名称"
@@ -63,7 +63,7 @@ Github与Gitcafe通过Pages服务提供了静态网站的托管服务。Pages分
 * [Gitcafe Pages帮助](https://gitcafe.com/GitCafe/Help/wiki/Pages-%E7%9B%B8%E5%85%B3%E5%B8%AE%E5%8A%A9)
 
 在创建好Pages项目后，我们需要配置`_config.yml`文件中的`deploy`字段
-```YAML
+``` yml
 deploy:
 - type: git
   repository: https://github.com/pzxbc/pzxbc.github.io.git
@@ -74,7 +74,7 @@ deploy:
 ```
 
 配置完成后，运行下面指令部署博客
-```Shell
+```bash
 cd <hexo-websit-dir>
 hexo clean
 hexo generate
@@ -97,7 +97,7 @@ blog | CNAME | 国内 | username.gitcafe.io
 经过上面设置后，我们在国内线路访问`blog.xxx.com`会访问到`username.githcafe.io`指向的服务器上的博客，通过国外线路会访问到`username.github.io`指向的服务器。这样也加速了我们博客打开的速度，因为gitcafe对于国内访问来说会快很多；同时也使得百度能够索引我们的站点，因为github屏蔽了百度的爬虫。
 
 配置完成后，我们可以通过下面命令确认是否成功(CNAME记录需要一段时间才能生效)
-```Shell
+```bash
 ping pzxbc.github.io
 # PING github.map.fastly.net (103.245.222.133) 56(84) bytes of data.
 # 64 bytes from 103.245.222.133: icmp_seq=1 ttl=51 time=326 ms
@@ -123,7 +123,7 @@ ping blog.pzxbc.com
 ### 使用git管理
 1. 在**github**上创建一个新的仓库`github-blog`用于管理Hexo站点文件
 2. 将Hexo站点本地文件推送到`github-blog`仓库中
-```Shell
+```bash
 cd hexo-website-dir
 git init
 git add .
@@ -133,7 +133,7 @@ git push -u origin master
 ```
 ### 同步站点文件至其他机器使用
 在使用了git管理我们的站点文件后，我们就拥有了博文回退、同步、协同创作的功能。我们可以轻松地将我们的站点文件同步至其他机器进行博文的编写和发布。
-```Shell
+```bash
 git clone https://github.com/pzxbc/github-blog.git <website-dir>
 cd <website-dir>
 npm install
@@ -142,7 +142,7 @@ npm install
 
 ## 5. 插件
 ### 插件使用
-```Shell
+```bash
 # 安装
 npm install <plugin-name> --save
 # 更新
@@ -166,7 +166,7 @@ npm uninstall <plugin-name> --save
 根据[官方文档](https://github.com/hexojs/hexo/wiki/Migrating-from-2.x-to-3.0)进行操作即可
 
 从2.X版本升至3.0的还需要更改`_config.yml`的`deploy`选项作，才能正常运行`hexo deploy`命令
-```YAML
+``` yml
 deploy:
   type: git
 ```
