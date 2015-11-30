@@ -1,6 +1,6 @@
 title: Hexo博客Wiki
-date: 2015-01-05 21:32:00
-updated: 2015-11-14 18:00:31
+date: 2015-01-05
+updated: 2015-11-29
 comments: true
 tags:
   - Hexo
@@ -11,8 +11,22 @@ permalink: hexo-blog-wiki
 ---
 
 ## 1. Hexo安装使用
-### 安装和配置
+### 安装
 参考[官方文档](https://hexo.io/docs/index.html)说明
+
+### 配置
+在`_config.yml`文件中，我们可以配置Hexo博客。
+
+* **skip_render选项**
+
+Hexo默认会渲染`source`文件下的所有的`*.md`和`*.html`文件。配置该选项，我们可以让Hexo在生成网站文件的时候跳过某些文件，比如用于域名所有权验证的HTML文件或者github仓库的Readme文件。
+
+``` yml
+skip_render:
+  - xxx.html
+  - readme.md
+```
+
 ### 使用
 ```bash
 # 创建新的站点

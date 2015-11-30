@@ -56,3 +56,5 @@ post_asset_folder: true
 ### 图片资源
 {% asset_img galaxy.jpg 银河 %}
 
+### 其他资源
+{% asset_link test.txt test %}
