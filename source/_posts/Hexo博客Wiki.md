@@ -33,13 +33,13 @@ skip_render:
 hexo init [folder]
 # 创建新的文章
 hexo new [layout] <title>
-# 生成静态文件
-hexo generate
 # 发布草稿
 hexo publish [layout] <filename>
 # 启动一个本地Server，并显示草稿文章
 # 默认的地址为: http://localhost:4000/
 hexo server --draft
+# 生成静态文件
+hexo generate
 # 部署
 hexo deploy
 # 清除

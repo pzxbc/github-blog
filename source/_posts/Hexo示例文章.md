@@ -7,7 +7,7 @@ categories:
   - 技术
 permalink: hexo-post-example
 date: 2015-11-16 13:12:18
-updated: 2015-11-16 13:12:18
+updated: 2015-12-14 13:12:18
 ---
 
 ## 二级标题
@@ -18,6 +18,8 @@ updated: 2015-11-16 13:12:18
 <!-- more -->
 
 段落测试，*斜体强调* **加粗强调**[行内的链接](http://blog.pzxbc.com "可选的标题")
+
+网站内部链接 [UI控件](/2015/12/11/cocos2dx-custom-pageview-control/)
 
 段落的强制换行  
 这是第二行。[参考式链接][链接id]
