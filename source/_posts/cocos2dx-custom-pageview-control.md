@@ -28,7 +28,7 @@ UI设计的想弄一个像IOS上时间选择样的控件，可无奈Cocos2d-x中
 {% asset_link UIPageCenteredView.cpp PageCenteredView源文件 %}
 {% asset_link UIPageCenteredView.h PageCenteredView头文件 %}
 2. **Lua版本** 只现实了竖直方向的，以后有水平的需求再说  
-{% asset_link %}
+{% asset_link PageCenterView.lua PageCenterView Lua版本 %}
 
 ## 使用方法
 
