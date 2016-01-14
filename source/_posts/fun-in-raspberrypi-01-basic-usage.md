@@ -3,8 +3,8 @@ comment: true
 date: 2016-01-03 16:13:20
 updated: 2016-01-03 16:13:20
 tags:
-  - 技术
   - 树莓派
+  - 技术
 categories:
   - 技术
 permalink: fun-in-raspberrypi-01-basic-usage
@@ -68,7 +68,8 @@ sudo raspbi-config
 
 1. 使用全部MicroSD卡存储空间(Expand Filesystem)
 2. 更改账号密码
-3. 更改语言环境(Internationalisation Options)(**需要重启**)
+3. 更改时区(Internationalisation Options)
+4. 更改语言环境(Internationalisation Options)(**需要重启**)
 
 ### 5.2 常用命令
 
