@@ -31,6 +31,7 @@ animate: true
 open_in_new: false
 
 # Miscellaneous
+baidu_analytics: true
 google_analytics: 'UA-19482318-2'
 favicon: /favicon.ico
 
