@@ -34,7 +34,7 @@ permalink: fun-in-raspberrypi-03-remote-access
 
 ### 2. 安装运行dnspod_ddns
 
-`dnspod_ddns`是一个动态更新`DNSPOD`的DNS记录的工具。它能在路由器IP地址发生变化时更新`DNSPOD`上A记录对应的IP地址。
+[dnspod_ddns](https://github.com/leeyiw/dnspod_ddns)是一个动态更新`DNSPOD`的DNS记录的工具。它能在路由器IP地址发生变化时更新`DNSPOD`上A记录对应的IP地址。
 
 **安装配置**
 ``` bash

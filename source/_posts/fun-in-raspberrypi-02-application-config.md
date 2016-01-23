@@ -16,6 +16,8 @@ permalink: fun-in-raspberrypi-02-application-config
 
 树莓派是基于**Debian**的系统，包管理器也是`apt-get`。关于`apt-get`的介绍、在软件安装中的作用以及与`dkpg`的关系请看[Wiki](https://wiki.debian.org/Apt)。`apt-get`工具主要是处理软件包的各种依赖关系并获取软件安装过程需要的各种安装包，`dkpg`负责实际的软件安装工作。
 
+<!-- more -->
+
 ### 1.1 使用包管理器安装应用软件
 
 ``` bash
