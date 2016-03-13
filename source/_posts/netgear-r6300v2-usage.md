@@ -78,7 +78,7 @@ sudo mount -t cifs "//router_ip/sharename" /mnt/mount_point -o user=username,pas
 ```
 4\. 加入`/etc/fsta`，开机自动挂载
 ``` bash
-//router_ip/sharename /mnt/mountpoint cifs defaults,username=username,password=password,uid=username,gid=usergroup 0 0
+//router_ip/sharename /mnt/mountpoint cifs defaults,username=username,password=password,uid=username,gid=usergroup,nofail 0 0
 ```
 
 路径中有空格的话，使用`\040`来替代。如果不希望密码明文下载`/etc/fstab`文件里，可以参考[Samba使用][samba]里的方法。
