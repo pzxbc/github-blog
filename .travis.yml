@@ -1,0 +1,23 @@
+language: node_js
+sudo: false
+node_js:
+- '4'
+branches:
+  only:
+  - master
+cache:
+  directories:
+  - node_modules
+before_install:
+- openssl aes-256-cbc -K $encrypted_d1dc27ed2f07_key -iv $encrypted_d1dc27ed2f07_iv
+  -in deploy_id_rsa.enc -out ~/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- git config --global user.name 'pzxbc'
+- git config --global user.email pzxbc@qq.com
+install:
+- npm install hexo-cli -g
+- npm install
+script:
+- npm run deploy
