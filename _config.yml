@@ -27,6 +27,7 @@ category_dir: categories
 code_dir: downloads/code
 skip_render:
   - googleb0b30ea37bb4c914.html
+  - .nojekyll
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -94,5 +95,5 @@ deploy:
   repository: git@github.com:pzxbc/pzxbc.github.io.git
   branch: master
 - type: git
-  repository: git@gitcafe.com:pzxbc/pzxbc.git
+  repository: git@git.coding.net:pzxbc/pzxbc.git
   branch: gitcafe-pages
