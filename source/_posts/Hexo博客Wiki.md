@@ -187,4 +187,6 @@ deploy:
 
 ## 7. Hexo博客自动部署
 
-参考[这里](http://blog.acwong.org/2016/03/20/auto-deploy-hexo-with-travis-CI/){% asset_link hexo-auto-deploy-by-travis-CI.pdf PDF备份 %}
+参考[这里](http://blog.acwong.org/2016/03/20/auto-deploy-hexo-with-travis-CI/)
+
+{% asset_link hexo-auto-deploy-by-travis-CI.pdf PDF备份 %}
