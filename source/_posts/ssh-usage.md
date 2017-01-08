@@ -158,7 +158,12 @@ ssh-keygen
 
 将公钥添加到远程主机`~/.ssh/authorized_keys`文件中，并将`authorized_keys`权限设为`600`。推荐使用`ssh-copy-id`命令来上传公钥。
 ``` bash
-ssh-copy-id -i pub_key_file test_user@host
+ssh-copy-id -i pub_key_file [-p port] test_user@host
+```
+
+部署成功后，使用下面命令测试登录
+``` bash
+ssh -i private_key [-p port] test_user@host
 ```
 
 ### 3. 禁止密码登录
