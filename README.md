@@ -14,8 +14,6 @@ sudo npm install -g hexo-cli
 
 > npm建议使用淘宝镜像源
 
-### 配置`SSH Key`
-
 ### 使用
 
 #### 创建一篇新文章
