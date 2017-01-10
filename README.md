@@ -3,7 +3,7 @@
 
 The source code for Hexo Blog.
 
-### Install
+### 安装
 
 ``` bash
 git clone https://github.com/pzxbc/github-blog.git
@@ -12,7 +12,11 @@ npm install
 sudo npm install -g hexo-cli
 ```
 
-### Usage
+> npm建议使用淘宝镜像源
+
+### 配置`SSH Key`
+
+### 使用
 
 #### 创建一篇新文章
 
@@ -31,6 +35,8 @@ hexo server -p 7050 --draft
 ``` bash
 hexo d -g
 ```
+
+> 上述为旧的方式，现在已使用`travis-cli`自动部署，`git push`修改就会自动部署
 
 #### 清理缓存
 
