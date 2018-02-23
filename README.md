@@ -3,16 +3,19 @@
 
 The source code for Hexo Blog.
 
+### 准备环境
+
+1. node.js&&npm 链接上node.js&&npm 安装的文档
+2. git
+
 ### 安装
 
 ``` bash
 git clone https://github.com/pzxbc/github-blog.git
 cd github-blog
 npm install
-sudo npm install -g hexo-cli
+npm install -g hexo-cli
 ```
-
-> npm建议使用淘宝镜像源
 
 ### 使用
 
