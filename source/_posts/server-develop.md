@@ -9,6 +9,7 @@ tags:
   - Server
 categories:
   - 技术
+  - 服务端开发
 ---
 
 ## 前言
@@ -19,4 +20,4 @@ categories:
 
 * SSH
 * VIM
-* Tmux
+* [Tmux](/2016/03/30/tmux-usage)

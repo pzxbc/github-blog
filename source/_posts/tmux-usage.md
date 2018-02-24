@@ -1,19 +1,21 @@
-title: tmux使用
+title: Tmux使用
 comments: true
 date: 2016-03-30 18:58:05
-updated: 2016-03-30 18:58:05
+updated: 2018-02-24 18:58:05
 tags:
   - 技术
   - Linux
   - Tmux
+  - Server
 categories:
   - 技术
+  - 服务端开发
 permalink: tmux-usage
 ---
 
-tmux是一个终端复用软件，它设计的更为简单和现代，欲取代GNU的screen。tmux可以让你在一个终端里新开多个窗口(类似XShell中的多标签)，并且每个窗口还可以继续切分为更小的pane。在远程登录中，tmux会保存你的工作环境，不会因为连接断开而命令停止执行，类似于nohup功能。当你重新进入原来的tmux的session后，不光之前执行的命令还在继续，原来打开的各种窗口、工作目录等都能恢复。
+Tmux是一个终端复用软件，它设计的更为简单和现代，欲取代GNU的Screen。Tmux可以让你在一个终端里新开多个窗口(类似XShell中的多标签)，并且每个窗口还可以继续切分为更小的pane。在远程登录中，Tmux会保存你的工作环境，不会因为连接断开而命令停止执行，类似于nohup功能。当你重新进入原来的Tmux的session后，不光之前执行的命令还在继续，原来打开的各种窗口、工作目录等都能恢复。
 
-那么到底使用tmux能够带来哪些好处了，就个人而言，我以前的工作方式是：
+那么到底使用Tmux能够带来哪些好处了，就个人而言，我以前的工作方式是：
 
 <!-- more -->
 
@@ -27,7 +29,7 @@ tmux是一个终端复用软件，它设计的更为简单和现代，欲取代G
 现在的工作方式是：
 
 1. 打开XShell，SSH远程登录
-2. 执行tmux命令恢复session，所有上次工作环境就恢复了
+2. 执行Tmux命令恢复session，所有上次工作环境就恢复了
 3. 开始工作
 4. 窗口多pane，命令和日志可以直接在当前窗口执行和查看
 
@@ -50,20 +52,63 @@ sudo apt-get install libncurses5-dev
 
 tmux的配置可以存在于`/etc/tmux.conf`和`~/.tmux.conf`文件中，前者是全局的配置，后者是关于特定用户的。
 
-下面是我的配置
+Tmux支持插件扩展，`TPM`是Tmux的插件管理器
+插件安装
 ``` bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+个性配置
+``` bash
+# list of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'seebi/tmux-colors-solarized'
+# set -g @plugin 'arcticicestudio/nord-tmux'
+
+# plugins configuration
+# set -g @nord_tmux_no_patched_font "1"
+set -g @colors-solarized 'dark'
+
 # 支持256 color
-set -g default-terminal "screen-256color"
+# set -g default-terminal "screen-256color"
+set -g terminal-overrides ',xterm-256color:Tc'
 
-set -g history-limit 10000
+# utf8 is on
+set -g utf8 on
+set -g status-utf8 on
 
-# 设置复制模式下键位绑定方式
+# address vim mode switching delay (http://superuser.com/a/252717/65504)
+set -s escape-time 0
+
+# increase scrollback buffer size
+set -g history-limit 50000
+
+# tmux messages are displayed for 4 seconds
+set -g display-time 4000
+
+# refresh 'status-left' and 'status-right' more often
+set -g status-interval 5
+
+# set only on OS X where it's required
+set -g default-command "reattach-to-user-namespace -l $SHELL"
+
+# focus events enabled for terminals that support them
+set -g focus-events on
+
+# super useful when using "grouped sessions" and multi-monitor setup
+setw -g aggressive-resize on
+
 set-window-option -g mode-keys vi
 
 bind k selectp -U # 选择上窗格  
 bind j selectp -D # 选择下窗格  
 bind h selectp -L # 选择左窗格  
 bind l selectp -R # 选择右窗格
+bind-key R source-file ~/.tmux.conf \; \
+    display-message "source-file done"
+
+# Initialize tmux plugin manager(kepp this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
 ```
 
 修改完配置后，想让当前tmux的session生效，进入Command模式(如何进入参考后面的使用)，执行下面命令
@@ -71,9 +116,9 @@ bind l selectp -R # 选择右窗格
 source-file ~/.tmux.conf
 ```
 
-如果在配置了256色后，发现在tmux中运行的程序(如vim)依然没有256色，那么使用`tmux -2`命令启动，强制使用256色。
-
+**如果在配置了256色后，发现在tmux中运行的程序(如vim)依然没有256色，那么使用`tmux -2`命令启动，强制使用256色。
 如果系统是`gbk`编码，但是SSH终端却使用`utf-8`编码连接，那么在启动时需要添加`-u`选项，强制使用`utf-8`，不然会出现乱码、花屏。
+建议`.bash_aliases`中添加`alias tmux='tmux -2 -u'**
 
 默认安装tmux后，在使用tmux命令的过程中不能tab补全，需要安装补全脚本。下载[补全脚本](https://github.com/srsudar/tmux-completion/blob/master/tmux)，放在`/etc/bash_completion.d/`目录下，然后执行`source /etc/bash_completion.d/tmux`。
 
