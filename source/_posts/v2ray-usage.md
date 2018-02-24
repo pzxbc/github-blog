@@ -1,6 +1,7 @@
 title: v2ray使用
+toc: true
 date: 2016-10-19 19:15:03
-updated: 2016-10-19 19:15:03
+updated: 2018-2-24 19:40:06
 tags:
   - 技术
   - v2ray
@@ -36,152 +37,24 @@ bash <(curl -L -s https://install.direct/go.sh)
 2. 运行v2ray `sudo service v2ray start`
 3. 使用`sudo service v2ray start|stop|status|reload`控制和查看v2ray
 
-> v2.3版本运行时会出现`[Warning]Router: invalid network mask: 128`，忽略即可，开发者说是在下一个版本修复。
+~~> v2.3版本运行时会出现`[Warning]Router: invalid network mask: 128`，忽略即可，开发者说是在下一个版本修复。~~
 
 ## 配置
 
 ### 墙内中转服务器配置
 
-注意：`vmess`协议一定要配置`users`域，不然启动会出现错误。`id`为uuid，需要与服务端配置相同，可以在[这里](https://www.uuidgenerator.net/)生成
+1. 支持不同协议接入：Sockets、Http、端口转发
+2. 支持TCP和UDP传出链接。根据策略来选择不同的连接
+3. 不同IP地址是否转发由路由器的iptables决定
+4. 转发Dnsmasq请求
 
-``` json
-{
-  "log" : {
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
-    "loglevel": "warning"
-  },
-  "inbound": {
-    "port": 7073,
-    "protocol": "http",
-    "settings": {
-        "timeout": 0
-    }
-  },
-  "outbound": {
-    "protocol": "vmess",
-    "settings": {
-        "vnext": [
-            {
-                "address": "127.0.0.1",
-                "port": 7072,
-                "users": [
-                    {"id": "d17a1af7-efa5-42ca-b7e9-6a35282d737f"}
-                ]
-            }
-        ]
-    }
-  },
-  "outboundDetour": [
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    },
-    {
-        "protocol": "freedom",
-        "settings": {},
-        "tag": "direct"
-    }
-  ],
-  "routing": {
-    "strategy": "rules",
-    "settings": {
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "0.0.0.0/8",
-            "10.0.0.0/8",
-            "100.64.0.0/10",
-            "127.0.0.0/8",
-            "169.254.0.0/16",
-            "172.16.0.0/12",
-            "192.0.0.0/24",
-            "192.0.2.0/24",
-            "192.168.0.0/16",
-            "198.18.0.0/15",
-            "198.51.100.0/24",
-            "203.0.113.0/24",
-            "::1/128",
-            "fc00::/7",
-            "fe80::/10"
-          ],
-          "outboundTag": "direct"
-        },
-        {
-            "type": "chinaip",
-            "outboundTag": "direct"
-        },
-        {
-            "type": "chinasites",
-            "outboundTag": "direct"
-        }
-      ]
-    }
-  }
-}
-```
+{% asset_link inner_config.json_bak 中转配置 %}
+
+注意：`vmess`协议一定要配置`users`域，不然启动会出现错误。`id`为uuid，需要与服务端配置相同，可以在[这里](https://www.uuidgenerator.net/)生成
 
 ### 墙外服务器配置
 
-``` json
-{
-  "log" : {
-    "access": "/var/log/v2ray/access.log",
-    "error": "/var/log/v2ray/error.log",
-    "loglevel": "warning"
-  },
-  "inbound": {
-    "port": 7072,
-    "protocol": "vmess",
-    "settings": {
-      "clients": [
-        {
-          "id": "d17a1af7-efa5-42ca-b7e9-6a35282d737f",
-          "level": 1
-        }
-      ]
-    }
-  },
-  "outbound": {
-    "protocol": "freedom",
-    "settings": {}
-  },
-  "outboundDetour": [
-    {
-      "protocol": "blackhole",
-      "settings": {},
-      "tag": "blocked"
-    }
-  ],
-  "routing": {
-    "strategy": "rules",
-    "settings": {
-      "rules": [
-        {
-          "type": "field",
-          "ip": [
-            "0.0.0.0/8",
-            "10.0.0.0/8",
-            "100.64.0.0/10",
-            "127.0.0.0/8",
-            "169.254.0.0/16",
-            "172.16.0.0/12",
-            "192.0.0.0/24",
-            "192.0.2.0/24",
-            "192.168.0.0/16",
-            "198.18.0.0/15",
-            "198.51.100.0/24",
-            "203.0.113.0/24",
-            "::1/128",
-            "fc00::/7",
-            "fe80::/10"
-          ],
-          "outboundTag": "blocked"
-        }
-      ]
-    }
-  }
-}
-```
+1. 支持不同传入链接
+2. 支持动态端口
+
+{% asset_link outer_config.json_bak 外服配置 %}
