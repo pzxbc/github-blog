@@ -74,13 +74,6 @@ set -g @colors-solarized 'dark'
 # set -g default-terminal "screen-256color"
 set -g terminal-overrides ',xterm-256color:Tc'
 
-# utf8 is on
-set -g utf8 on
-set -g status-utf8 on
-
-# address vim mode switching delay (http://superuser.com/a/252717/65504)
-set -s escape-time 0
-
 # increase scrollback buffer size
 set -g history-limit 50000
 
@@ -89,12 +82,6 @@ set -g display-time 4000
 
 # refresh 'status-left' and 'status-right' more often
 set -g status-interval 5
-
-# set only on OS X where it's required
-set -g default-command "reattach-to-user-namespace -l $SHELL"
-
-# focus events enabled for terminals that support them
-set -g focus-events on
 
 # super useful when using "grouped sessions" and multi-monitor setup
 setw -g aggressive-resize on
