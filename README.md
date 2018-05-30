@@ -5,8 +5,10 @@ The source code for Hexo Blog.
 
 ### 准备环境
 
-1. node.js&&npm 链接上node.js&&npm 安装的文档
+1. node.js&&npm
 2. git
+
+> node.js安装好后一般已经附带了包管理工具npm
 
 ### 安装
 
