@@ -94,9 +94,6 @@ deploy:
 - type: git
   repository: git@github.com:pzxbc/pzxbc.github.io.git
   branch: master
-- type: git
-  repository: git@git.coding.net:pzxbc/pzxbc.git
-  branch: gitcafe-pages
 
 # json-content
 jsonContent:
