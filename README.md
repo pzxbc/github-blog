@@ -24,7 +24,7 @@ npm install -g hexo-cli
 #### 创建一篇新文章
 
 ``` bash
-hexo new <title>
+hexo new <title> -p 技术/filename.md
 ```
 
 #### 启动server，浏览器预览
@@ -46,3 +46,7 @@ hexo d -g
 ``` bash
 hexo clean
 ```
+
+### 插件
+
+1. [hexo-directory-category](https://github.com/zthxxx/hexo-directory-category): 根据目录结构自动添加category
