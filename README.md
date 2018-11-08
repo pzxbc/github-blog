@@ -50,3 +50,17 @@ hexo clean
 ### 插件
 
 1. [hexo-directory-category](https://github.com/zthxxx/hexo-directory-category): 根据目录结构自动添加category
+
+
+### 维护
+
+### 主题更新
+
+git-bash中运行下面指令
+
+``` shell
+$ mkdir themes/next
+$ curl -L https://api.github.com/repos/theme-next/hexo-theme-next/tarball/v6.0.0 | tar -zxv -C themes/next --strip-components=1
+```
+
+然后提交到git仓库
