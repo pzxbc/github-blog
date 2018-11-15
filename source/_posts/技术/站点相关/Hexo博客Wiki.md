@@ -5,8 +5,6 @@ comments: true
 tags:
   - Hexo
   - 技术
-categories:
-  - 技术
 permalink: hexo-blog-wiki
 ---
 

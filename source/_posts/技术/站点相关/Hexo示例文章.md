@@ -3,8 +3,6 @@ comments: true
 tags:
   - 技术
   - Hexo
-categories:
-  - 技术
 permalink: hexo-post-example
 date: 2015-11-16 13:12:18
 updated: 2015-12-14 13:12:18

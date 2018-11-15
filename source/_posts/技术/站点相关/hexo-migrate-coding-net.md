@@ -5,8 +5,6 @@ updated: 2016-03-24 21:42:09
 tags:
   - 技术
   - Hexo
-categories:
-  - 技术
 permalink: hexo-migrate-coding-net
 ---
 
