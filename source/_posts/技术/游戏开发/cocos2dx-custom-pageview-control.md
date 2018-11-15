@@ -3,8 +3,6 @@ tags:
   - 技术
   - Cocos2d-x
 comments: true
-categories:
-  - 技术
 permalink: cocos2dx-custom-pageview-control
 date: 2015-12-11 22:10:10
 updated: 2015-12-11 22:10:10

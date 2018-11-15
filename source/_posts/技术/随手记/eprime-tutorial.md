@@ -3,8 +3,6 @@ tags:
   - Eprime
   - 技术
 comments: true
-categories:
-  - 技术
 permalink: eprime-tutorial
 date: 2015-11-18 21:47:52
 updated: 2015-11-18 21:47:52

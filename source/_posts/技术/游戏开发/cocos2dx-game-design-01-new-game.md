@@ -5,8 +5,6 @@ updated: 2015-12-15 12:55:08
 tags:
   - 技术
   - Cocos2d-x
-categories:
-  - 技术
 permalink: cocos2dx-game-design-01-new-game
 ---
 

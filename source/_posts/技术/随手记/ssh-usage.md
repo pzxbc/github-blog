@@ -5,8 +5,6 @@ updated: 2016-01-29 19:03:57
 tags:
   - 技术
   - SSH
-categories:
-  - 技术
 permalink: ssh-usage
 ---
 

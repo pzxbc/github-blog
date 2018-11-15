@@ -5,8 +5,6 @@ updated: 2016-01-20 20:34:08
 tags:
   - 技术
   - Web
-categories:
-  - 技术
 permalink: nginx-php-run-other-role
 ---
 

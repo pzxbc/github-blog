@@ -6,8 +6,6 @@ tags:
   - 技术
   - Python
   - Paramiko
-categories:
-  - 技术
 permalink: paramiko-usage
 ---
 

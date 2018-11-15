@@ -7,9 +7,6 @@ updated: 2018-02-23 15:22:26
 tags:
   - 技术
   - Server
-categories:
-  - 技术
-  - 服务端开发
 ---
 
 ## 前言

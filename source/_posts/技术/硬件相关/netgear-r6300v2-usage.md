@@ -5,8 +5,6 @@ updated: 2016-01-26 19:17:53
 tags:
   - 技术
   - 路由器
-categories:
-  - 技术
 permalink: netgear-r6300v2-usage
 ---
 

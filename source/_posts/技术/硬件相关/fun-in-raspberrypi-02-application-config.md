@@ -5,8 +5,6 @@ updated: 2016-01-05 16:21:45
 tags:
   - 树莓派
   - 技术
-categories:
-  - 技术
 permalink: fun-in-raspberrypi-02-application-config
 ---
 

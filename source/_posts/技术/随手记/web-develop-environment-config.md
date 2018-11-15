@@ -6,8 +6,6 @@ tags:
   - 技术
   - 树莓派
   - Web
-categories:
-  - 技术
 permalink: web-develop-environment-config
 ---
 

@@ -5,8 +5,6 @@ updated: 2018-2-24 19:40:06
 tags:
   - 技术
   - v2ray
-categories:
-  - 技术
 permalink: v2ray-usage
 ---
 

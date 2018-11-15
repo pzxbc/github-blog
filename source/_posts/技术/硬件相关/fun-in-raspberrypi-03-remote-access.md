@@ -5,8 +5,6 @@ updated: 2016-01-14 18:34:15
 tags:
   - 树莓派
   - 技术
-categories:
-  - 技术
 permalink: fun-in-raspberrypi-03-remote-access
 ---
 

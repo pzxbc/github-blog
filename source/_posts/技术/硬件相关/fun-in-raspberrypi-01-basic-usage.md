@@ -5,8 +5,6 @@ updated: 2016-01-03 16:13:20
 tags:
   - 树莓派
   - 技术
-categories:
-  - 技术
 permalink: fun-in-raspberrypi-01-basic-usage
 ---
 

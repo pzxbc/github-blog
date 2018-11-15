@@ -4,8 +4,6 @@ updated: 2017-01-18 19:22:20
 tags:
   - 技术
   - Python
-categories:
-  - 技术
 permalink: python-encoding
 ---
 

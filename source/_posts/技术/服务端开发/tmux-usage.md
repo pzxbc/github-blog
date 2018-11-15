@@ -8,9 +8,6 @@ tags:
   - Linux
   - Tmux
   - Server
-categories:
-  - 技术
-  - 服务端开发
 permalink: tmux-usage
 ---
 

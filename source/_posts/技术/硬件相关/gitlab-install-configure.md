@@ -5,8 +5,6 @@ tags:
   - 技术
   - 树莓派
   - Gitlab
-categories:
-  - 技术
 permalink: gitlab-install-configure
 ---
 

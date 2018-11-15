@@ -6,8 +6,6 @@ tags:
   - Linux
   - Debian
   - 树莓派
-categories:
-  - 技术
 permalink: raspberrypi-debian-startup-script-config
 ---
 

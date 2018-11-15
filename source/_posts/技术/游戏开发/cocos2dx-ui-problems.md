@@ -5,8 +5,6 @@ updated: 2015-12-10 16:02:36
 tags:
   - 技术
   - Cocos2d-x
-categories:
-  - 技术
 permalink: cocos2dx-ui-problems
 ---
 

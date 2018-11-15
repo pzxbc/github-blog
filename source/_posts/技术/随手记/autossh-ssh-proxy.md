@@ -7,8 +7,6 @@ tags:
   - Linux
   - AutoSSH
   - SSH
-categories:
-  - 技术
 permalink: autossh-ssh-proxy
 ---
 

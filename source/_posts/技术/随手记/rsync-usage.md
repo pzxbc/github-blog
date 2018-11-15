@@ -4,8 +4,6 @@ updated: 2017-04-06 18:50:30
 tags:
   - 技术
   - rsync
-categories:
-  - 技术
 permalink: rsync-usage
 ---
 

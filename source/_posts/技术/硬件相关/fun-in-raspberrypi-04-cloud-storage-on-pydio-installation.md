@@ -7,8 +7,6 @@ tags:
   - 私有云存储
   - Pydio
   - 技术
-categories:
-  - 技术
 permalink: fun-in-raspberrypi-04-cloud-storage-on-pydio-installation
 ---
 

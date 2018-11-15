@@ -6,8 +6,6 @@ tags:
   - 技术
   - 私有云存储
   - Pydio
-categories:
-  - 技术
 permalink: pydio-config
 ---
 
