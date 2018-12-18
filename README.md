@@ -23,8 +23,22 @@ npm install -g hexo-cli
 
 #### 创建一篇新文章
 
+1. 直接创建到`_posts`目录
+
 ``` bash
 hexo new <title> -p 技术/filename.md
+```
+
+2. 先创建草稿
+
+``` bash
+hexo new draft <title>
+```
+
+草稿完成后，移动到发布目录`_post`(也可以直接手动移动，在`_posts`目录使用文件夹分类后需要手动移动，`hexo publish`命令不支持path)
+
+``` bash
+hexo publish <title>
 ```
 
 #### 启动server，浏览器预览
