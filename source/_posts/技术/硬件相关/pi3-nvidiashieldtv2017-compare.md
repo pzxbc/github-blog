@@ -1,11 +1,24 @@
 title: 树莓派3-NvidiaShieldTV2017性能对比
 date: 2018-12-07 21:20:01
-updated: 2018-12-07 21:20:01
+updated: 2018-12-18 21:20:01
 tags:
   - raspberry pi3
   - nvidia shield tv 2017
   - benchmark
 ---
+
+更新：之前`Nvidia Shield TV`中安装的`Python`是`armv7`版本，更新为`aarch64`版本后，居然快比`armv7`版本快3倍！
+
+```
+~ # python3 -OO bench.py
+4.9053307790309191 4.9530157269909978 4.9775087489979342
+```
+
+上述脚本在`armv7`版本下结果是15秒。说明`aarch64`相比于`armv7`架构性能提升是巨大的。
+
+---
+两者`bench`软件都是`armv7`版本的情况
+
 
 找了两个benchmark的脚本，纯计算的话`NvidiaShieldTV2017`大概比`Pi3`快25%，综合的话大概是`Pi3`性能的两倍。
 
