@@ -14,6 +14,8 @@ tags:
 
 {% asset_img visual-studio-parallel-compile-setup-01.png %}
 
+<!-- more -->
+
 2. 在打开的对话框中，左侧选择 “C/C++”->“General（常规）”中将“ Multi-processor Compilation(多处理器编译)”打开
 
 {% asset_img visual-studio-parallel-compile-setup-02.png %}
